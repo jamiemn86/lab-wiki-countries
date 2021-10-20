@@ -15,8 +15,8 @@ class CountriesList extends React.Component {
         <h1>List of Countries:</h1>
         <ol>
           {this.state.list.map((country) => (
-            <li key={country.name}>
-              <Link to={`/country/${country.name.official}`}>
+            <li key={country.cca3}>
+              <Link to={`/country/${country.cca3}`}>
                 {country.name.official}
               </Link>
             </li>
