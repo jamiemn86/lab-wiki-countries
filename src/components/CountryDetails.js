@@ -30,12 +30,22 @@ class CountryDetails extends Component {
     this.setState({ list });
   }
 
+  listLanguages(obj) {
+    for (const val of Object.values(obj)) {
+      return val;
+    }
+  }
+
   render() {
     console.log(this.state);
     return (
       (this.state.list && (
         <div>
           <h1>{this.state.list.name.common}</h1>
+          <p>
+            The people here speak:{' '}
+            {Object.values(this.state.list.languages).join(', ')}
+          </p>
         </div>
       )) || <h1>Loading...</h1>
     );
