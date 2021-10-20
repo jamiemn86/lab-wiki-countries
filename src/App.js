@@ -1,15 +1,17 @@
 import './App.css';
-import Navbar from './components/Navbar'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import CountriesList from './components/CountriesList';
 
 function App() {
   return (
     <div className="App">
-  <Navbar/>
+      <Navbar />
       <header className="App-header">
-        <p>
-          Welcome to WikiCountries
-        </p>
+        <p>Welcome to WikiCountries</p>
+        <CountriesList />
       </header>
+      
     </div>
   );
 }
